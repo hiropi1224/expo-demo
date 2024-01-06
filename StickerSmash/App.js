@@ -77,7 +77,7 @@ export default function App() {
           width: 320,
           height: 440,
         });
-
+        /* eslint-env browser */
         const link = document.createElement('a');
         link.download = 'sticker-smash.jpeg';
         link.href = dataUrl;
@@ -115,7 +115,7 @@ export default function App() {
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </GestureHandlerRootView>
   );
 }
