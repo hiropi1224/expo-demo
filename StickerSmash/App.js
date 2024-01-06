@@ -1,10 +1,10 @@
 import * as ImagePicker from 'expo-image-picker';
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import Button from './components/Button';
 import ImageViewer from './components/ImageViewer';
-import { useState } from 'react';
 
 const PlaceholderImage = require('./assets/images/background-image.png');
 
@@ -12,7 +12,7 @@ export default function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const pickImageAsync = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
+    const result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
       quality: 1,
     });
